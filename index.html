@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaynak Dükkanı – Kaynak, Montaj, Boru Büküm</title>
+  <meta name="description" content="Kaynak Dükkanı: Kaynak, montaj ve boru büküm hizmetlerinde güvenilir çözüm ortağınız. Projelerinize uygun kaliteli imalat ve yerinde montaj." />
+  <meta name="keywords" content="kaynak, boru büküm, metal imalat, montaj, paslanmaz kaynak, alüminyum kaynak" />
+  <meta property="og:title" content="Kaynak Dükkanı – Kaynak, Montaj, Boru Büküm" />
+  <meta property="og:description" content="Kaynak, montaj ve boru büküm hizmetlerinde güvenilir çözüm ortağınız." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="tr_TR" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23f96d00' d='M126 20c-8 0-14 6-14 14v44h28V34c0-8-6-14-14-14z'/%3E%3Cpath fill='%23ffffff' d='M28 138c0-6 5-10 11-10h178c6 0 11 4 11 10v64c0 6-5 10-11 10H39c-6 0-11-4-11-10z'/%3E%3Cpath fill='%23f96d00' d='M56 150h144v40H56z'/%3E%3C/svg%3E" />
+
+  <!-- JSON-LD: Güncelleyin -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kaynak Dükkanı",
+    "url": "",
+    "telephone": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "",
+      "addressRegion": "",
+      "postalCode": "",
+      "addressCountry": "TR"
+    },
+    "areaServed": "TR",
+    "description": "Kaynak, montaj ve boru büküm hizmetleri"
+  }
+
+
+  </script>
+
+  <style>
+    /* Link renklerini düzelt */
+a {
+  color: var(--text); /* normalde beyaz veya açık gri */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent); /* turuncu vurgun */
+}
+
+a:visited {
+  color: var(--text); /* artık mavi/mor olmayacak */
+}
+
+a:active {
+  color: var(--accent-2); /* tıklarken açık sarı vurgu efekti */
+}
+
+/* Özellikle nav içindeki linkleri düzelt */
+/* Navbar linklerini buton haline getir */
+/* Navbar linkleri - güncellenmiş */
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin: 0 4px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.25s ease;
+}
+
+nav a:hover {
+  background: linear-gradient(135deg, rgba(249,109,0,0.9), rgba(230,90,0,0.9));
+  color: #ffffff !important; /* Yazı artık her zaman beyaz kalır */
+  border-color: rgba(249,109,0,0.45);
+  box-shadow: 0 0 14px rgba(249,109,0,0.45);
+  transform: translateY(-2px);
+  opacity: 1 !important; /* olası şeffaflık problemlerini kapatır */
+}
+
+
+nav a:active {
+  transform: scale(0.97);
+}
+
+
+
+    :root{
+  --bg:#222831; /* ana arka plan */
+  --panel:#2e3440; /* kart arka planı */
+  --muted:#9aa4b2; /* gri metin */
+  --text:#eef2f5; /* ana metin */
+  --accent:#f96d00; /* turuncu vurgu */
+  --accent-2:#ffd369; /* açık vurgu */
+  --max:1200px;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body {
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  scroll-behavior: smooth;
+}
+
+.container{max-width:var(--max); margin-inline:auto; padding:0 20px}
+
+/* Header */
+header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(180%) blur(10px);
+  background:linear-gradient(to bottom, rgba(34,40,49,.9), rgba(34,40,49,.6));
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+.brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px}
+.brand .logo{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--accent); box-shadow:0 6px 16px rgba(249,109,0,.45)}
+.brand .logo svg{width:18px;height:18px;fill:#111}
+nav a{color:var(--text); text-decoration:none; margin:0 12px; opacity:.88}
+nav a:hover{color:var(--accent)}
+.cta{display:flex; gap:10px; align-items:center}
+.btn{padding:10px 14px; border-radius:999px; border:1px solid rgba(255,255,255,.12); text-decoration:none; color:var(--text)}
+.btn.primary{background:var(--accent); border-color:transparent; color:#111; font-weight:700}
+.hamburger{display:none; background:none;border:0; color:var(--text)}
+
+@media (max-width:900px){
+  nav{display:none}
+  .hamburger{display:block}
+  .mobile{display:none; position:absolute; inset:60px 20px auto 20px; background:rgba(30,36,45,.98); border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:14px; box-shadow:var(--shadow)}
+  .mobile a{display:block; padding:10px 12px; border-radius:10px}
+  .mobile a:hover{background:rgba(255,255,255,.06)}
+  .mobile.open{display:block}
+}
+
+/* Hero */
+.hero{padding:80px 0 60px}
+.hero .wrap{display:grid; grid-template-columns: 1.1fr .9fr; gap:40px; align-items:center}
+.kicker{color:var(--accent-2); font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:.85rem}
+h1{font-size:clamp(28px, 4vw, 48px); line-height:1.15; margin:10px 0 12px}
+.lead{color:#dfe6ee; font-size:clamp(15px, 1.8vw, 19px)}
+.hero-cta{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
+
+.badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+.badge{padding:8px 12px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); color:#d7dee6; font-size:.9rem}
+
+.art{position:relative; min-height:260px; border-radius:var(--radius); background:linear-gradient(135deg, rgba(249,109,0,.25), rgba(82,94,106,.2)), radial-gradient(600px 300px at 80% 0, rgba(255,211,105,.25), transparent 50%), #1f252d; box-shadow:var(--shadow); overflow:hidden}
+.spark{position:absolute; width:6px; height:6px; background:var(--accent); border-radius:50%; filter:blur(.5px); opacity:.8; animation:fly 6s linear infinite}
+.spark:nth-child(1){top:40%; left:10%; animation-delay:0s}
+.spark:nth-child(2){top:60%; left:20%; animation-delay:.6s}
+.spark:nth-child(3){top:50%; left:40%; animation-delay:1.2s}
+.spark:nth-child(4){top:30%; left:70%; animation-delay:1.8s}
+.spark:nth-child(5){top:70%; left:85%; animation-delay:2.4s}
+@keyframes fly{0%{transform:translate(0,0) scale(1)} 50%{transform:translate(80px,-30px) scale(1.2)} 100%{transform:translate(160px,-60px) scale(.9); opacity:.2}}
+
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .art{order:-1}
+}
+
+/* Sections */
+section{padding:70px 0}
+.section-head{display:flex; align-items:end; justify-content:space-between; margin-bottom:26px}
+.section-head h2{font-size:clamp(22px, 3vw, 34px); margin:0}
+.muted{color:var(--muted)}
+
+/* Services */
+.cards{display:grid; grid-template-columns:repeat(12,1fr); gap:16px}
+.card{grid-column:span 4; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+.card h3{margin:8px 0 6px}
+.icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(249,109,0,.15);border:1px solid rgba(249,109,0,.25)}
+.icon svg{width:22px;height:22px;fill:var(--accent)}
+.card ul{margin:10px 0 0 18px}
+
+@media (max-width:900px){.card{grid-column:span 12}}
+@media (min-width:901px) and (max-width:1150px){.card{grid-column:span 6}}
+
+/* Gallery */
+.grid{display:grid; grid-template-columns:repeat(12,1fr); gap:16px}
+.tile{grid-column:span 4; background:linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); overflow:hidden}
+.tile .txt{padding:12px 14px}
+.chip{display:inline-block; padding:4px 10px; border-radius:999px; background:rgba(249,109,0,.12); border:1px solid rgba(249,109,0,.22); color:#ffd4b2; font-size:.8rem; margin-bottom:6px}
+
+@media (max-width:900px){.tile{grid-column:span 12}}
+@media (min-width:901px) and (max-width:1150px){.tile{grid-column:span 6}}
+
+/* About */
+.about{display:grid; gap:20px; grid-template-columns:1.2fr .8fr}
+.about .panel{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:20px}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+
+/* Contact */
+.contact{display:grid; gap:20px; grid-template-columns: .9fr 1.1fr}
+.contact .panel{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:20px}
+.form grid{display:grid}
+label{display:block; font-weight:600; margin:10px 0 6px}
+input, select, textarea{width:100%; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(17,20,24,.6); color:var(--text)}
+textarea{min-height:120px; resize:vertical}
+
+/* Footer */
+footer{padding:26px 0 50px; color:var(--muted); border-top:1px solid rgba(255,255,255,.06)}
+
+/* Utilities */
+.reveal{opacity:0; transform:translateY(14px); transition:all .6s ease}
+.reveal.in{opacity:1; transform:none}
+
+.float-wa{position:fixed; right:18px; bottom:18px; width:54px;height:54px; display:grid;place-items:center; background:#25D366; color:#111; border-radius:50%; box-shadow:0 10px 24px rgba(0,0,0,.35); text-decoration:none}
+.float-wa svg{width:28px;height:28px; fill:#111}
+
+.top{position:fixed; right:18px; bottom:86px; width:44px;height:44px; border-radius:50%; display:grid;place-items:center; border:1px solid rgba(255,255,255,.18); color:var(--text); text-decoration:none; backdrop-filter:blur(10px); background:rgba(255,255,255,.05)}
+/* Kart içeriği düzeni (tüm kartlarda aynı tipografi) */
+.map-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.map-link:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 8px 0 10px;
+}
+
+.card ul {
+  margin: 10px 0 0 18px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.card ul li {
+  color: var(--text);
+  font-size: 0.93rem;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+/* Video & Image */
+
+.tile video.vid,
+.tile img {
+  width: 100%;
+  aspect-ratio: 16/9;   /* sabit format */
+  object-fit: contain;  /* kırpma olmasın */
+  display: block;
+  background:#111;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.carousel-window { overflow: hidden; width: 100%; }
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track video,
+.carousel-track img,
+.tile video.vid,
+.tile img {
+  width: 100%;
+  height: 220px;       /* sabit kutu yüksekliği */
+  object-fit: cover;   /* yanlardaki siyah boşluğu kaldırır */
+  flex-shrink: 0;
+  display: block;
+  background: #000;    /* arka plan tamamen kapansın */
+  border-radius: 12px 12px 0 0;
+}
+
+
+/* Butonlar */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+.carousel button.prev { left: 10px; }
+.carousel button.next { right: 10px; }
+.carousel button:hover { background: rgba(0,0,0,0.8); }
+
+
+
+
+
+</style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Kaynak Dükkanı anasayfa">
+        <span class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 14h18v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5z"/><path d="M12 2a2 2 0 0 0-2 2v6h4V4a2 2 0 0 0-2-2z"/></svg>
+        </span>
+        <span>Kerem Kaynak</span>
+      </a>
+      <nav aria-label="Ana menü">
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#urunler">Ürünler</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+      <div class="cta">
+        <a class="btn" href="#iletisim">Teklif Al</a>
+        <button class="hamburger btn" aria-label="Menüyü aç/kapat">☰</button>
+      </div>
+    </div>
+    <div class="container mobile" id="mobileMenu" aria-label="Mobil menü">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#urunler">Ürünler</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#iletisim">İletişim</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <div class="kicker">Endüstriyel kalite · Zamanında teslim</div>
+          <h1>Güçlü kaynak, sağlam üretim.</h1>
+          <p class="lead">Kaynak, <strong>montaj</strong> ve <strong>boru büküm</strong> başta olmak üzere metal imalatın her aşamasında yanınızdayız. Tek parça imalatlardan seri üretime kadar ölçüye tam uygunlukla çalışırız.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#iletisim">Fiyat Teklifi Al</a>
+            <a class="btn" href="#urunler">Ürünleri Gör</a>
+          </div>
+          <div class="badges">
+            <span class="badge">TIG / MIG / MAG</span>
+            <span class="badge">Paslanmaz &amp; Alüminyum</span>
+            <span class="badge">Yerinde Montaj</span>
+            <span class="badge">Ölçüye Uygun İmalat</span>
+          </div>
+        </div>
+        <div class="art" aria-hidden="true">
+          <video class="bgv" autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-poster.jpg">
+            <source src="assets/video/hero-welding.mp4" type="video/mp4" />
+            <source src="assets/video/hero-welding.webm" type="video/webm" />
+          </video>
+          <span class="spark"></span>
+          <span class="spark"></span>
+          <span class="spark"></span>
+          <span class="spark"></span>
+          <span class="spark"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HİZMETLER -->
+    <section id="hizmetler">
+      <div class="container">
+        <div class="section-head">
+          <h2>Hizmetler</h2>
+          <span class="muted">İhtiyacınıza özel çözümler</span>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7h18v4H3z"/><path d="M7 11v6a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-6"/></svg>
+            </div>
+            <h3>Kaynak</h3>
+            <p class="muted">TIG, MIG/MAG, elektrot; paslanmaz, siyah sac, alüminyum. Projeye uygun kaynak yöntemleri.</p>
+            <ul>
+              <li>İmalat ve tamir</li>
+              <li>WPS'e uygunluk</li>
+              <li>Görsel & sızdırmazlık kontrol</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h16l-2 10H6z"/><circle cx="8" cy="19" r="2"/><circle cx="16" cy="19" r="2"/></svg>
+            </div>
+            <h3>Montaj</h3>
+            <p class="muted">Saha montajı, ölçü alımı ve yerinde uygulama. Proje koordinasyonu ile zamanında teslim.</p>
+            <ul>
+              <li>Yerinde keşif</li>
+              <li>Ankraj & sabitleme</li>
+              <li>Bakım & revizyon</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12c4-6 14-6 18 0"/><path d="M3 12c4 6 14 6 18 0"/></svg>
+            </div>
+            <h3>Boru Büküm</h3>
+            <p class="muted">Çeşitli çap ve et kalınlıklarında hassas büküm. Tek parça veya seri üretim.</p>
+            <ul>
+              <li>Kalite kontrol ölçümleri</li>
+              <li>Fikstürlü üretim</li>
+              <li>Çizime göre imalat</li>
+            </ul>
+          </article>
+          <!-- Yeni Hizmet: Lazer Kaynak -->
+<div class="card reveal">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+          d="M12 3v18m9-9H3m12-9v2a9 9 0 0 1 0 14v2m-6-2v-2a9 9 0 0 1 0-14V3" />
+      </svg>
+    </div>
+    <h3>Lazer Kaynak</h3>
+    <p>Lazer kaynağı ile hassas ve estetik kaynak işlemleri. 
+       Yüksek doğruluk, düşük deformasyon ve temiz yüzey elde edilir.</p>
+    <ul>
+      <li>Paslanmaz, alüminyum ve karbon çelik uygulamaları</li>
+      <li>Robotik sistemlerle entegre üretim</li>
+      <li>Mikro düzeyde hassas kaynak imalatı</li>
+    </ul>
+  </div>
+  
+  <!-- Yeni Hizmet: Tamir ve Revizyon -->
+  <div class="card reveal">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+          d="M3 12l2-2 4 4L21 4M21 4v7m0-7h-7" />
+      </svg>
+    </div>
+    <h3>Tamir & Revizyon</h3>
+    <p>Arızalı ya da deformasyona uğramış metal parçaların yenilenmesi. 
+       CNC, kaynak ve montaj desteğiyle üretime geri kazandırma hizmeti.</p>
+    <ul>
+      <li>CNC parça tamiri ve güçlendirme</li>
+      <li>Kaynak sonrası yüzey revizyonu</li>
+      <li>Fikstür kontrolü ve yeniden montaj</li>
+    </ul>
+  </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- ÜRÜNLER / GALERİ -->
+<section id="urunler">
+    <div class="container">
+      <div class="section-head">
+        <h2>Ürünler & Projeler</h2>
+        <span class="muted">Seçili işlerimizden örnekler</span>
+      </div>
+      <div class="grid">
+
+             <!-- ÜTÜ Kazanı -->
+        <article class="tile reveal">
+            <div class="carousel">
+              <button class="prev">‹</button>
+              <div class="carousel-window">
+                <div class="carousel-track">
+                  
+                  <!-- Video --><!-- Foto 1 -->
+                  <img src="C:\Users\Lethrais\Desktop\Kaynak Dükkanı Site\fotolar videolar\argonutukaynak1.jpeg" alt="Ütü kazan kaynak fotoğrafı">
+          
+                  <!-- Foto 2 -->
+                  <img src="C:\Users\Lethrais\Desktop\Kaynak Dükkanı Site\fotolar videolar\argonutukaynak2.jpeg" alt="Ütü kazan kaynak detay fotoğrafı">
+
+
+                  <video class="vid" controls muted>
+                    <source src="C:\Users\Lethrais\Desktop\Kaynak Dükkanı Site\fotolar videolar\utuargonkaynak.mp4" type="video/mp4">
+                  </video>
+          
+                  
+          
+                </div>
+              </div>
+              <button class="next">›</button>
+            </div>
+          
+            <div class="txt">
+              <span class="chip">Argon</span>
+              <h3>Ütü Kazanı Kaynağı</h3>
+              <p class="muted">Argon (TIG) kaynağı ile ütü kazanı kaynağı; yüksek dayanım ve temiz dikiş.</p>
+            </div>
+          </article>
+          
+          
+  
+         <!-- Hidrolik Ünite -->
+         <article class="tile reveal">
+         <div class="carousel">
+              <button class="prev">‹</button>
+              <div class="carousel-window">
+                <div class="carousel-track">
+                  <img src="fotolar videolar/hidrolikyapim1.jpeg" alt="Hidrolik ünite aşama 1">
+                  <img src="fotolar videolar/hidrolikyapim2.jpeg" alt="Hidrolik ünite aşama 2">
+                  <img src="fotolar videolar/hidrolikyapim3.jpeg" alt="Hidrolik ünite aşama 3">
+                  <img src="fotolar videolar/hidrolikyapim4.jpeg" alt="Hidrolik ünite aşama 4">
+                  <img src="fotolar videolar/hidrolikyapim5.jpeg" alt="Hidrolik ünite aşama 5">
+                </div>
+              </div>
+              <button class="next">›</button>
+            </div>
+            <div class="txt">
+              <span class="chip">Hidrolik Ünite</span>
+              <h3>Hidrolik Ünite İmalatı</h3>
+              <p class="muted">
+                Çeşitli parçalardan birleştirilerek oluşturulan hidrolik ünite. 
+                Gaz altı (MIG/MAG) kaynağı ile yüksek dayanım ve sızdırmazlık sağlandı. 
+                Seri üretim standartlarına uygun fikstür kontrollü kaynak işlemleriyle tamamlandı.
+              </p>
+            </div>
+          </article>
+
+          <!-- Çeki Demiri -->
+         <article class="tile reveal">
+         <div class="carousel">
+              <button class="prev">‹</button>
+            <div class="carousel-window">
+        <div class="carousel-track">
+            <img src="fotolar videolar/mercedescekidemiri1.jpeg" alt="Çeki demiri kaynak işlemi">
+        <img src="fotolar videolar/mercedescekidemiri2.jpeg" alt="Çeki demiri imalatı">
+         </div>
+       </div>
+      <button class="next">›</button>
+       </div>
+      <div class="txt">
+        <span class="chip">Çeki Demiri</span>
+           <h3>Çeki Demiri İmalatı (Koppelbolzen)</h3>
+       <p class="muted">
+      Mercedes tırları için seri üretim çeki demirleri (Koppelbolzen).  
+        Malzeme: ST 52-3 · Çap: Ø31 mm – Ø10 mm · Boy: 134 mm.  
+          Gaz altı (MIG/MAG) kaynağı ile yüksek dayanım ve sızdırmazlık sağlanmıştır.  
+          Seri üretim standartlarına uygun, korozyona karşı kataforez kaplama ile tamamlanmıştır.
+      </p>
+                  </div>
+          </article>
+  
+
+        <!-- Video 2: VIALAND KAPI -->
+<article class="tile reveal">
+    <div class="carousel">
+      <button class="prev">‹</button>
+      <div class="carousel-window">
+        <div class="carousel-track">
+          
+          <!-- Video 1 -->
+           
+          <video class="vid" controls preload="metadata" poster="assets/img/vialandkapi1-poster.jpg" muted>
+            <source src="C:\Users\Lethrais\Desktop\Kaynak Dükkanı Site\fotolar videolar\vialandkapi1.mp4" type="video/mp4" />
+          </video>
+  
+          <!-- Video 2 -->
+          <video class="vid" controls preload="metadata" poster="assets/img/vialandkapi2-poster.jpg" muted>
+            <source src="C:\Users\Lethrais\Desktop\Kaynak Dükkanı Site\fotolar videolar\vialandkapi2.mp4" type="video/mp4" />
+          </video>
+  
+        </div>
+      </div>
+      <button class="next">›</button>
+    </div>
+  
+    <div class="txt">
+      <span class="chip">Montaj</span>
+      <h3>Vialand Kapı Montajı</h3>
+      <p class="muted">Vialand projesinde uygulanan özel kapı montajı; sahada ölçü kontrolü ve gaz altı kaynağı ile yapılmıştır.</p>
+    </div>
+  </article>
+  
+
+   <!-- Video 3: Argon Kaynak -->
+   <article class="tile reveal">
+    
+    <video class="vid" controls preload="metadata" poster="assets/img/argon-poster.jpg" playsinline muted>
+      <source src="C:\Users\Lethrais\Desktop\Kaynak Dükkanı Site\fotolar videolar\konveyörbantcnc.mp4" type="video/mp4" />
+      <source src="assets/video/paslanmaz-kaynak-01.webm" type="video/webm" />
+    </video>
+    <div class="txt">
+      <span class="chip">Tamir</span>
+      <h3>CNC Konveyör Bant Tamiri</h3>
+      <p class="muted">CNC makinelerinde kullanılan konveyör bant sistemi üzerinde meydana gelen arızalar giderildi. Mekanik aksamın yenilenmesi, bağlantı noktalarının güçlendirilmesi ve bantın sorunsuz çalışması için gerekli tamir işlemleri gerçekleştirildi. Bu sayede üretim hattının kesintisiz ve verimli çalışması sağlandı.</p>
+    </div>
+  </article>
+
+          
+  
+            
+      </div>
+    </div>
+  </section>
+  
+    <!-- HAKKIMIZDA -->
+<section id="hakkimizda">
+    <div class="container">
+      <div class="section-head">
+        <h2>Hakkımızda</h2>
+        <span class="muted">Güven, işçilik ve zamanında teslim</span>
+      </div>
+  
+      <div class="about">
+        <!-- Sol Panel -->
+        <div class="panel reveal">
+          <p>
+            <strong>Kaynak Dükkanı</strong>, 45 yılı aşkın tecrübeyi modern teknolojiyle buluşturan bir aile işletmesidir. 
+            Babamın sektördeki engin deneyimi ve bilgi birikimini temel alarak kurduğumuz atölyemizde, 
+            metal imalatının her aşamasında ölçüye uygun, dayanıklı ve estetik işçiliği benimsiyoruz.
+          </p>
+          <p>
+            Klasik kaynak yöntemlerinden lazer kaynağına, boru bükümden şase ve tamire kadar uzanan geniş bir üretim yelpazesinde hizmet veriyoruz. 
+            Tek parça üretimden seri imalata, sahada montajdan atölye çalışmalarına kadar, çözüm odaklı ve güvenilir iş anlayışımızla her gün üzerine koyarak ilerliyoruz.
+          </p>
+          <ul>
+            <li>Lazer, Argon (TIG) ve Gaz Altı (MIG/MAG) kaynak uygulamaları</li>
+            <li>Boru büküm, tel şekillendirme ve fikstürlü üretim</li>
+            <li>Şase imalatı, tamir ve yerinde montaj</li>
+          </ul>
+          <p>
+            Bizim için iş yalnızca metal birleştirmek değil; <strong>emeği, deneyimi ve güveni bir araya getirerek kalıcı işler üretmektir.</strong>
+          </p>
+        </div>
+  
+        <!-- Sağ Panel -->
+        <div class="panel reveal">
+          <strong>Çalışma Prensiplerimiz</strong>
+          <ol>
+            <li>Ölçü ve çizime %100 uygunluk</li>
+            <li>Doğru kaynak yöntemi ve malzeme seçimi</li>
+            <li>Takvim ve teslimat disiplinine sadakat</li>
+            <li>Uzun ömürlü, güvenli ve estetik sonuçlar üretme</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+    <!-- İLETİŞİM / TEKLİF AL -->
+    <section id="iletisim">
+      <div class="container">
+        <div class="section-head">
+          <h2>Teklif Al · İletişim</h2>
+          <span class="muted">Kısa formu doldurun, sizi arayalım.</span>
+        </div>
+        <div class="contact">
+          <div class="panel reveal">
+            <h3>İletişim Bilgileri</h3>
+            <p class="muted">Telefon ve adres bilgilerini buraya ekleyin:</p>
+            <ul>
+              <li><strong>Tel:</strong> <span id="tel-display">(+90) xxx xxx xx xx</span></li>
+              <li><strong>E‑posta:</strong> <span id="mail-display">info@ornek.com</span></li>
+              <li><strong>Adres:</strong>
+                <a href="https://www.google.com/maps?q=Topçular,+İncirlik+Sk.+Gündoğar+İş+Merkezi+D:1+No:+109,+34060+Eyüpsultan/İstanbul" 
+                 target="_blank" 
+                class="map-link">
+                Topçular, İncirlik Sk. Gündoğar İş Merkezi D:1 No: 109, 34060 Eyüpsultan/İstanbul
+  </a>
+              <li><strong>Çalışma Saatleri:</strong> Hafta içi 09:00 – 21:00</li>
+            </ul>
+          </div>
+          <div class="panel reveal">
+            <form id="quoteForm" aria-label="Teklif formu">
+              <label for="name">Ad Soyad</label>
+              <input id="name" name="name" required placeholder="Adınızı yazın" />
+
+              <label for="phone">Telefon</label>
+              <input id="phone" name="phone" required placeholder="05xx xxx xx xx" />
+
+              <label for="service">Hizmet</label>
+              <select id="service" name="service" required>
+                <option value="">Seçiniz</option>
+                <option>Kaynak</option>
+                <option>Montaj</option>
+                <option>Boru Büküm</option>
+                <option>Diğer</option>
+              </select>
+
+              <label for="details">Kısa Açıklama</label>
+              <textarea id="details" name="details" placeholder="Ölçü, malzeme, adet vb."></textarea>
+
+              <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap">
+                <button class="btn primary" type="submit">Teklif Talebi Gönder</button>
+                <a class="btn" href="tel:+90xxxxxxxxxx" id="telBtn">Ara</a>
+              </div>
+              <small class="muted">Gönder butonu WhatsApp veya e‑posta ile mesaj formu oluşturur.</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap">
+        <div>© <span id="y"></span> Kaynak Dükkanı</div>
+        <div>
+          <a href="#hizmetler">Hizmetler</a> ·
+          <a href="#urunler">Ürünler</a> ·
+          <a href="#iletisim">İletişim</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- YÜZEN WHATSAPP (Telefon numarasını scriptte değiştirin) -->
+  <a class="float-wa" id="waFloat" href="#" aria-label="WhatsApp ile yazın">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2a10 10 0 0 0-8.66 14.95L2 22l5.2-1.36A10 10 0 1 0 12.04 2zm5.8 14.72c-.24.68-1.4 1.3-1.94 1.34-.5.04-1.12.06-1.8-.11-.42-.11-.96-.31-1.66-.6-2.92-1.26-4.83-4.25-4.98-4.45-.14-.2-1.19-1.58-1.19-3.01 0-1.43.75-2.13 1.02-2.42.27-.29.59-.36.78-.36h.56c.18 0 .43-.07.67.51.24.58.83 2 .9 2.15.07.15.11.33.02.53-.09.2-.13.33-.27.51-.14.18-.29.4-.41.54-.14.18-.29.37-.12.69.18.31.79 1.3 1.71 2.11 1.18 1.05 2.18 1.37 2.5 1.52.31.15.5.13.69-.09.2-.22.79-.92 1-1.24.22-.31.44-.27.73-.16.29.11 1.81.86 2.12 1.01.31.16.52.24.6.38.09.13.09.76-.15 1.44z"/></svg>
+  </a>
+  <a class="top" href="#top" aria-label="Yukarı çık">↑</a>
+<!-- SCRİPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+SCRİPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+SCRİPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+SCRİPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+SCRİPTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+-->
+  <script>
+    // CAROUSEL SCRIPT
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const track = carousel.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const prevBtn = carousel.querySelector('.prev');
+  const nextBtn = carousel.querySelector('.next');
+  let index = 0;
+
+  function updateCarousel() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length; // son foto'dan sonra başa dön
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length; // baştan geriye giderse sona dön
+    updateCarousel();
+  });
+
+  // İlk pozisyonu ayarla
+  updateCarousel();
+});
+
+    // ====== AYARLAR (GÜNCELLEYİN) ======
+    const BUSINESS_PHONE = '905349680058'; // Örn: 90555xxxxxxx (başında 0 yok)
+    const BUSINESS_MAIL  = 'keremkaynak58@gmail.com';
+    const BUSINESS_TEL_DISPLAY = '(+90) 534 968 00 58';
+
+    // ====== NAV ======
+    const burger = document.querySelector('.hamburger');
+    const mobile = document.getElementById('mobileMenu');
+    burger?.addEventListener('click', () => mobile.classList.toggle('open'));
+
+    // ====== YIL ======
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // ====== İLETİŞİM BUTONLARI ======
+    const telBtn = document.getElementById('telBtn');
+    const telDisp = document.getElementById('tel-display');
+    const mailDisp = document.getElementById('mail-display');
+    const waFloat = document.getElementById('waFloat');
+
+    if (BUSINESS_PHONE && BUSINESS_PHONE.includes('90')){
+      telBtn.href = `tel:+${BUSINESS_PHONE}`;
+      waFloat.href = `https://wa.me/${BUSINESS_PHONE}`;
+      telDisp.textContent = `+${BUSINESS_PHONE}`;
+    } else {
+      waFloat.style.display = 'none';
+      telBtn.style.display = 'none';
+      telDisp.textContent = BUSINESS_TEL_DISPLAY;
+    }
+    if (BUSINESS_MAIL){ mailDisp.textContent = BUSINESS_MAIL; }
+
+    // ====== FORM HANDLER ======
+    const form = document.getElementById('quoteForm');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const details = document.getElementById('details').value.trim();
+
+      const msg = `Merhaba, teklif talebi:%0A- Ad: ${encodeURIComponent(name)}%0A- Tel: ${encodeURIComponent(phone)}%0A- Hizmet: ${encodeURIComponent(service)}%0A- Detay: ${encodeURIComponent(details)}`;
+
+      if (BUSINESS_PHONE && BUSINESS_PHONE.includes('90')){
+        window.open(`https://wa.me/${BUSINESS_PHONE}?text=${msg}`, '_blank');
+      } else if (BUSINESS_MAIL){
+        window.location.href = `mailto:${BUSINESS_MAIL}?subject=Teklif Talebi – Kaynak Dükkanı&body=${msg}`;
+      } else {
+        alert('Teşekkürler! Bilgileriniz alındı. Kısa sürede dönüş yapacağız.');
+      }
+
+      form.reset();
+    });
+
+    // ====== SCROLL REVEAL ======
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.18});
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+
+    // ====== VIDEO VISIBILITY AUTO PLAY/PAUSE ======
+    const videoIO = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ const v = e.target; if(e.isIntersecting){ v.play().catch(()=>{}); } else { v.pause(); } });
+    }, {threshold:.35});
+    document.querySelectorAll('video.vid[autoplay]').forEach(v=> videoIO.observe(v));
+  </script>
+</body>
+</html>
