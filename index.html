@@ -11,6 +11,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="tr_TR" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23f96d00' d='M126 20c-8 0-14 6-14 14v44h28V34c0-8-6-14-14-14z'/%3E%3Cpath fill='%23ffffff' d='M28 138c0-6 5-10 11-10h178c6 0 11 4 11 10v64c0 6-5 10-11 10H39c-6 0-11-4-11-10z'/%3E%3Cpath fill='%23f96d00' d='M56 150h144v40H56z'/%3E%3C/svg%3E" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- JSON-LD: Güncelleyin -->
   <script type="application/ld+json">
@@ -287,6 +288,86 @@ footer{padding:26px 0 50px; color:var(--muted); border-top:1px solid rgba(255,25
   background: #000;    /* arka plan tamamen kapansın */
   border-radius: 12px 12px 0 0;
 }
+/* --- MOBİL DÜZEN (tabletten küçük ekranlar için) --- */
+@media (max-width: 768px) {
+
+  /* Genel düzen */
+  body {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  header .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero .wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .cards, .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card, .tile {
+    grid-column: 1 / -1;
+    padding: 16px;
+  }
+
+  .carousel button {
+    font-size: 18px;
+    padding: 4px 8px;
+  }
+
+  /* Videolar ve resimler */
+  .tile img,
+  .tile video {
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+  }
+
+  /* Hakkımızda */
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  /* İletişim paneli */
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+  }
+}
+.mobile.open {
+  display: block !important;
+}
+@media (max-width: 768px) {
+  .hero .art video {
+    display: none;
+  }
+  .hero .art {
+    min-height: 150px;
+    background: url('assets/img/hero-mobile.jpg') center/cover no-repeat;
+  }
+}
+
+
 
 
 /* Butonlar */
@@ -487,8 +568,6 @@ footer{padding:26px 0 50px; color:var(--muted); border-top:1px solid rgba(255,25
                   <video class="vid" controls muted>
                     <source src="C:\Users\Lethrais\Desktop\Kaynak Dükkanı Site\fotolar videolar\utuargonkaynak.mp4" type="video/mp4">
                   </video>
-          
-                  
           
                 </div>
               </div>
